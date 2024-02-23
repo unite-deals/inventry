@@ -1,6 +1,28 @@
 # importing libraries
 import pandas as pd
 import streamlit as st
+hide_github_link_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visiblity: hidden;}
+    header {visibility: hidden;}
+        .viewerBadge_container__1QSob {
+            display: none !important;
+        }
+    </style>
+"""
+st.markdown(hide_github_link_style, unsafe_allow_html=True)
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+pipeline = DiffusionPipeline.from_pretrained("stabilityai/stable-diffusion-xl-refiner-1.0")
+
+
+
 
 # use whole page width
 st.set_page_config(page_title="My Streamlit App", layout="wide")
@@ -14,7 +36,7 @@ df["selected"] = [False for i in range(df.shape[0])]
 list_sub_category = df["sub-category"].sort_values().unique().tolist()
 
 # le title
-st.header("Inventory Manager")
+st.header("Inventory Manager Developed by TGG LLC. contact for more details : info@technoglobalgroup.com")
 st.divider()
 
 # defining dataframe we want to dynamically interact with and make changes to within streamlit session. 
