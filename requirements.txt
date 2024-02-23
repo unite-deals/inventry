@@ -1,0 +1,8 @@
+numpy==1.24.2
+streamlit==1.26.0
+plotly==5.14.1
+pandas==1.5.3
+scikit-learn==1.2.2
+streamlit-plotly-events
+DateTime==5.1
+plotly-express==0.4.1
