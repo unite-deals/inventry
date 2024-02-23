@@ -25,7 +25,7 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 # use whole page width
-st.set_page_config(page_title="My Streamlit App", layout="wide")
+
 
 # read csv file
 df = pd.read_csv("inventory.csv")
